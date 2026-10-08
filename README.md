@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Arcade Clássico
 
 *[Versão em português](README.pt.md)*
@@ -164,3 +165,7 @@ Export presets are in `export_presets.cfg` (Windows, Linux, Android and Web).
 ## License
 
 The code is released under the [MIT License](LICENSE). The [Godot](https://godotengine.org) engine is also MIT-licensed.
+=======
+# classic-games
+Tribute to classic video games
+>>>>>>> 89dc11ea1b63dd63dbd660ad7154b5c95d98800b
