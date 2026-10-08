@@ -22,7 +22,13 @@ func attach(g: PongGame) -> void:
 	g.wall_hit.connect(_on_wall_hit)
 	g.point_scored.connect(_on_point_scored)
 	g.game_over.connect(_on_game_over)
-	_build_sfx()
+	# Os sons de cada estilo só são gerados uma vez (ou já vêm prontos do Synth.prewarm).
+	var cached: Variant = Synth.cache_get(get_script().resource_path)
+	if cached != null:
+		sfx = cached
+	else:
+		_build_sfx()
+		Synth.cache_set(get_script().resource_path, sfx)
 	_setup()
 
 

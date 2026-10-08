@@ -38,4 +38,4 @@ func step(delta: int) -> void:
 
 
 func _refresh() -> void:
-	text = "%s:   <  %s  >" % [title, options[index]]
+	text = "%s:   <  %s  >" % [I18n.t(title), I18n.t(str(options[index]))]

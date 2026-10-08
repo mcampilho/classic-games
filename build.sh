@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-# Gera as builds localmente. Uso: ./build.sh [windows|linux|android|all]
-# Requer o Godot 4.4 no PATH (ou GODOT=/caminho/para/godot) e os templates de exportação instalados.
+# Gera as builds localmente. Uso: ./build.sh [windows|linux|android|web|all]
+# Requer o Godot 4.7 no PATH (ou GODOT=/caminho/para/godot) e os templates de exportação instalados.
 set -euo pipefail
 cd "$(dirname "$0")"
 GODOT="${GODOT:-godot}"
@@ -21,10 +21,12 @@ case "$target" in
   windows) build "Windows" builds/windows/ArcadeClassico.exe ;;
   linux)   build "Linux" builds/linux/ArcadeClassico.x86_64 ;;
   android) build "Android" builds/android/ArcadeClassico.apk ;;
+  web)     build "Web" builds/web/index.html ;;
   all)
     build "Windows" builds/windows/ArcadeClassico.exe
     build "Linux" builds/linux/ArcadeClassico.x86_64
     build "Android" builds/android/ArcadeClassico.apk || echo "!! Android falhou: confirma o SDK/keystore nas Definições do Editor."
+    build "Web" builds/web/index.html
     ;;
   *) echo "Alvo desconhecido: $target"; exit 1 ;;
 esac

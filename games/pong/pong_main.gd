@@ -15,6 +15,7 @@ var style_idx := 1
 var mode_idx := 0
 var diff_idx := 1
 var playing := false
+var _prewarm_task := -1
 
 var game: PongGame
 var ui: CanvasLayer
@@ -43,6 +44,8 @@ func _ready() -> void:
 	_build_ui()
 	_apply_style()
 	_show_menu()
+	# Prepara já os sons dos outros estilos, em segundo plano.
+	_prewarm_task = Synth.prewarm(SKINS.map(func(s: Dictionary) -> Script: return s.script))
 
 	var args := OS.get_cmdline_user_args()
 	for a in args:
@@ -78,10 +81,10 @@ func _build_ui() -> void:
 	# Menu principal
 	menu = UI.overlay(ui_root)
 	var box: VBoxContainer = menu.box
-	title_label = UI.label("PONG", 84)
+	title_label = UI.label(I18n.t("RAQUETES"), 80)
 	box.add_child(title_label)
-	box.add_child(UI.label("1972  ·  versão modernizada", 20))
-	var mode_btn := CycleButton.new().setup("Modo", MODES, mode_idx)
+	box.add_child(UI.label(I18n.t("ténis eletrónico ao estilo de 1972"), 20))
+	var mode_btn := CycleButton.new().setup(I18n.t("Modo"), MODES, mode_idx)
 	mode_btn.value_changed.connect(_on_mode_changed)
 	box.add_child(mode_btn)
 	diff_button = CycleButton.new().setup("CPU", DIFFS, diff_idx)
@@ -89,26 +92,26 @@ func _build_ui() -> void:
 		diff_idx = i
 		Settings.set_value("pong", "difficulty", i))
 	box.add_child(diff_button)
-	var style_btn := CycleButton.new().setup("Estilo", SKINS.map(func(s: Dictionary) -> String: return s.name), style_idx)
+	var style_btn := CycleButton.new().setup(I18n.t("Estilo"), SKINS.map(func(s: Dictionary) -> String: return s.name), style_idx)
 	style_btn.value_changed.connect(func(i: int) -> void:
 		style_idx = i
 		_apply_style())
 	box.add_child(style_btn)
-	play_button = UI.button("Jogar", _start_match)
+	play_button = UI.button(I18n.t("Jogar"), _start_match)
 	box.add_child(play_button)
-	box.add_child(UI.button("Voltar ao arcade", func() -> void: exit_requested.emit()))
-	var hint := UI.label("J1: W / S    J2: setas    Ecrã tátil: arrastar    Pausa: Esc", 16)
+	box.add_child(UI.button(I18n.t("Voltar ao arcade"), func() -> void: exit_requested.emit()))
+	var hint := UI.label(I18n.t("J1: W / S    J2: setas    Ecrã tátil: arrastar    Pausa: Esc"), 16)
 	hint.modulate.a = 0.6
 	box.add_child(hint)
 	diff_button.visible = mode_idx == 0
 
 	# Pausa
 	pause_menu = UI.overlay(ui_root, 420)
-	pause_menu.box.add_child(UI.label("PAUSA", 52))
-	resume_button = UI.button("Continuar", _set_paused.bind(false))
+	pause_menu.box.add_child(UI.label(I18n.t("PAUSA"), 52))
+	resume_button = UI.button(I18n.t("Continuar"), _set_paused.bind(false))
 	pause_menu.box.add_child(resume_button)
-	pause_menu.box.add_child(UI.button("Recomeçar", _start_match))
-	pause_menu.box.add_child(UI.button("Menu", _show_menu))
+	pause_menu.box.add_child(UI.button(I18n.t("Recomeçar"), _start_match))
+	pause_menu.box.add_child(UI.button(I18n.t("Menu"), _show_menu))
 
 	# Fim do jogo
 	over_menu = UI.overlay(ui_root, 460)
@@ -116,9 +119,9 @@ func _build_ui() -> void:
 	over_menu.box.add_child(over_title)
 	over_score = UI.label("", 30)
 	over_menu.box.add_child(over_score)
-	again_button = UI.button("Jogar de novo", _start_match)
+	again_button = UI.button(I18n.t("Jogar de novo"), _start_match)
 	over_menu.box.add_child(again_button)
-	over_menu.box.add_child(UI.button("Menu", _show_menu))
+	over_menu.box.add_child(UI.button(I18n.t("Menu"), _show_menu))
 
 
 func _apply_style() -> void:
@@ -178,9 +181,9 @@ func _on_game_over(winner: int) -> void:
 	if not playing:
 		return
 	if game.mode == PongGame.Mode.VS_CPU:
-		over_title.text = "VITÓRIA!" if winner == 0 else "A CPU GANHOU"
+		over_title.text = I18n.t("VITÓRIA!") if winner == 0 else I18n.t("A CPU GANHOU")
 	else:
-		over_title.text = "JOGADOR %d VENCE!" % (winner + 1)
+		over_title.text = I18n.t("JOGADOR %d VENCE!") % (winner + 1)
 	over_score.text = "%d  –  %d" % [game.scores[0], game.scores[1]]
 	_show_screen(over_menu, again_button)
 
@@ -205,3 +208,8 @@ func go_back() -> void:
 		_show_menu()
 	else:
 		_set_paused(true)
+
+
+func _exit_tree() -> void:
+	if _prewarm_task >= 0:
+		WorkerThreadPool.wait_for_task_completion(_prewarm_task)
