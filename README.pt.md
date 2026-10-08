@@ -2,6 +2,8 @@
 
 *[English version](README.md)*
 
+### ▶ [Jogar no browser](https://mcampilho.github.io/classic-games/)
+
 18 jogos originais inspirados nos clássicos dos anos 70, 80 e 90, feitos em **Godot 4.7** (GDScript), com builds para **Windows, Linux e Android**.
 
 Cada jogo tem três estilos visuais — um fiel ao aspeto da época, um moderno e popular (neon, desenho animado...) e um criado de raiz para este projeto — que partilham exatamente a mesma jogabilidade e trocam-se em tempo real no menu. Os gráficos, os sons e as músicas são todos gerados em código: não há imagens nem ficheiros de áudio.
@@ -10,7 +12,7 @@ O jogo está em **português, inglês e espanhol**: segue o idioma do sistema e 
 
 No ecrã inicial, o rodapé mostra o clássico que inspirou o jogo com o foco (ou debaixo do rato), uma breve história e a ligação para a Wikipédia. Nos ecrãs táteis, onde tocar num jogo o abre logo, há um botão **i** ao lado de cada jogo para isso.
 
-![Ecrã inicial do Arcade Clássico](docs/screenshots/launcher.jpg)
+![Ecrã inicial do Arcade Clássico](docs/screenshots/launcher_pt.jpg)
 
 | Jogo | Inspirado em |
 |---|---|
@@ -35,82 +37,6 @@ No ecrã inicial, o rodapé mostra o clássico que inspirou o jogo com o foco (o
 
 > **Aviso:** este é um projeto de fãs, sem fins comerciais. Os nomes dos jogos que serviram de inspiração são marcas registadas dos respetivos donos e só são referidos para indicar essa inspiração; este projeto não tem qualquer ligação a essas empresas. Todo o código, gráficos, sons e músicas são originais.
 
-## Capturas
-
-Cada imagem mostra os três estilos do jogo, da esquerda para a direita (clássico, popular, original). As capturas estão em inglês.
-
-**Raquetes**
-
-![Raquetes](docs/screenshots/pong.jpg)
-
-**Quebra-Tijolos**
-
-![Quebra-Tijolos](docs/screenshots/breakout.jpg)
-
-**Ataque Alienígena**
-
-![Ataque Alienígena](docs/screenshots/invaders.jpg)
-
-**Meteoros**
-
-![Meteoros](docs/screenshots/asteroids.jpg)
-
-**Enxame**
-
-![Enxame](docs/screenshots/galaxian.jpg)
-
-**Pirilampo**
-
-![Pirilampo](docs/screenshots/firefly.jpg)
-
-**Travessia**
-
-![Travessia](docs/screenshots/frogger.jpg)
-
-**Cogumelos**
-
-![Cogumelos](docs/screenshots/centipede.jpg)
-
-**Incursão**
-
-![Incursão](docs/screenshots/penetrator.jpg)
-
-**Galinheiro**
-
-![Galinheiro](docs/screenshots/chuckie.jpg)
-
-**Astronauta a Jato**
-
-![Astronauta a Jato](docs/screenshots/jetpac.jpg)
-
-**Torre das Relíquias**
-
-![Torre das Relíquias](docs/screenshots/relics.jpg)
-
-**Encaixe**
-
-![Encaixe](docs/screenshots/blocks.jpg)
-
-**Sarilhos na Escola**
-
-![Sarilhos na Escola](docs/screenshots/school.jpg)
-
-**Estrada do Sol**
-
-![Estrada do Sol](docs/screenshots/outrun.jpg)
-
-**Espada do Vale**
-
-![Espada do Vale](docs/screenshots/vale.jpg)
-
-**Fuga do Palácio**
-
-![Fuga do Palácio](docs/screenshots/palace.jpg)
-
-**Rebanho**
-
-![Rebanho](docs/screenshots/flock.jpg)
-
 ## Abrir o projeto
 
 1. Instala o [Godot 4.7](https://godotengine.org/download) (versão normal, não .NET).
@@ -122,6 +48,8 @@ Em todos os jogos: **Esc / P / Start** pausa; **F11** ecrã inteiro; no Android 
 ## Raquetes (1972)
 
 *Inspirado em [Pong](https://pt.wikipedia.org/wiki/Pong) (Atari, 1972).*
+
+![Raquetes](docs/screenshots/pong.jpg)
 
 | Estilo | O que é |
 |---|---|
@@ -152,6 +80,8 @@ No ecrã tátil (e com o rato, a arrastar) a raquete segue o dedo em posição a
 
 *Inspirado em [Breakout](https://pt.wikipedia.org/wiki/Breakout_(jogo_eletr%C3%B4nico)) (Atari, 1976).*
 
+![Quebra-Tijolos](docs/screenshots/breakout.jpg)
+
 | Estilo | O que é |
 |---|---|
 | **Clássico 1976** | Como na máquina da Atari: monitor a preto e branco com tiras de celofane colorido coladas no vidro — por isso a bola e as paredes mudam de cor ao passar em cada faixa e a raquete é azul. Bips de onda quadrada com um tom por cor de tijolo. |
@@ -179,6 +109,8 @@ No ecrã tátil (e com o rato, a arrastar) a raquete segue o dedo em posição a
 ## Ataque Alienígena (1978)
 
 *Inspirado em [Space Invaders](https://en.wikipedia.org/wiki/Space_Invaders) (Taito, 1978).*
+
+![Ataque Alienígena](docs/screenshots/invaders.jpg)
 
 | Estilo | O que é |
 |---|---|
@@ -211,6 +143,8 @@ Os desenhos dos invasores, do disco voador e do canhão são originais (no mesmo
 
 *Inspirado em [Asteroids](https://en.wikipedia.org/wiki/Asteroids_(video_game)) (Atari, 1979).*
 
+![Meteoros](docs/screenshots/asteroids.jpg)
+
 | Estilo | O que é |
 |---|---|
 | **Clássico 1979** | Monitor vetorial: linhas brancas finas com brilho de fósforo, algarismos traçados a vetor, explosões em pontos e a nave a desfazer-se em segmentos. A "batida" de 2 notas, o motor e as sirenes dos discos. |
@@ -239,6 +173,8 @@ Os desenhos dos invasores, do disco voador e do canhão são originais (no mesmo
 
 *Inspirado em [Galaxian](https://en.wikipedia.org/wiki/Galaxian) (Namco, 1979).*
 
+![Enxame](docs/screenshots/galaxian.jpg)
+
 | Estilo | O que é |
 |---|---|
 | **Clássico 1979** | Fundo negro com estrelas coloridas a cair e a piscar, naves em píxeis multicolores, o míssil pousado na ponta da nave, bandeiras de vaga e o zumbido contínuo da formação. |
@@ -262,6 +198,8 @@ Iguais aos do Ataque Alienígena: ← → (A / D), rato ou comando; disparar com
 ## Pirilampo (1980)
 
 *Inspirado em [Pac-Man](https://en.wikipedia.org/wiki/Pac-Man) (Namco, 1980).*
+
+![Pirilampo](docs/screenshots/firefly.jpg)
 
 Um jogo **original** de perseguição em labirinto, no espírito dos arcades de 1980 (personagens, labirinto e nome próprios). Um pirilampo recolhe pontos de luz num jardim-labirinto, perseguido por 4 morcegos. As flores de luz fazem-no brilhar: os morcegos ficam encandeados, fogem, e podem ser apanhados.
 
@@ -292,6 +230,8 @@ Um jogo **original** de perseguição em labirinto, no espírito dos arcades de 
 
 *Inspirado em [Frogger](https://en.wikipedia.org/wiki/Frogger) (Konami, 1981).*
 
+![Travessia](docs/screenshots/frogger.jpg)
+
 | Estilo | O que é |
 |---|---|
 | **Clássico 1981** | Rio azul-noite, estrada negra, passeios roxos, sebe com 5 tocas, veículos e rã em píxeis, barra de tempo e uma melodia de chip (original). |
@@ -318,6 +258,8 @@ Desenhos originais (rã, veículos, tartarugas, crocodilo e mosca).
 ## Cogumelos (1981)
 
 *Inspirado em [Centipede](https://en.wikipedia.org/wiki/Centipede_(video_game)) (Atari, 1981).*
+
+![Cogumelos](docs/screenshots/centipede.jpg)
 
 | Estilo | O que é |
 |---|---|
@@ -347,9 +289,11 @@ Desenhos originais (cogumelos, centopeia, atirador, aranha, pulga e escorpião).
 
 *Inspirado em [Penetrator](https://en.wikipedia.org/wiki/Penetrator_(video_game)) (Melbourne House, 1982).*
 
+![Incursão](docs/screenshots/penetrator.jpg)
+
 | Estilo | O que é |
 |---|---|
-| **Clássico 1981** | Fundo preto e o terreno desenhado só com a linha de contorno, uma cor por zona, como nos micros de 8 bits; sons de altifalante. |
+| **Clássico 1982** | Fundo preto e o terreno desenhado só com a linha de contorno, uma cor por zona, como nos micros de 8 bits; sons de altifalante. |
 | **Neon** | Céu estrelado em paralaxe, terreno escuro com contornos de luz (um par de cores por zona), nave e inimigos com halo. |
 | **Mapa Topográfico** | A missão numa carta militar em corte: papel quadriculado, terreno em tintas hipsométricas com curvas de nível, inimigos como símbolos de mapa, cartela e escala gráfica. |
 
@@ -372,6 +316,8 @@ Nave, mísseis, radares, discos e depósito são desenhos originais.
 ## Galinheiro (1983)
 
 *Inspirado em [Chuckie Egg](https://en.wikipedia.org/wiki/Chuckie_Egg) (A&F Software, 1983).*
+
+![Galinheiro](docs/screenshots/chuckie.jpg)
 
 | Estilo | O que é |
 |---|---|
@@ -399,6 +345,8 @@ Os 8 níveis, o agricultor, as galinhas e o pato são desenhos originais.
 
 *Inspirado em [Jetpac](https://en.wikipedia.org/wiki/Jetpac) (Ultimate Play the Game, 1983).*
 
+![Astronauta a Jato](docs/screenshots/jetpac.jpg)
+
 | Estilo | O que é |
 |---|---|
 | **Clássico 1983** | Fundo preto, plataformas verdes, chão amarelo e cores puras dos micros de 8 bits; o foguete muda de cor a cada modelo. |
@@ -424,6 +372,8 @@ Astronauta, foguetes, cápsulas, gemas e os oito tipos de alienígenas são dese
 ## Torre das Relíquias (1984)
 
 *Inspirado em [Knight Lore](https://en.wikipedia.org/wiki/Knight_Lore) (Ultimate Play the Game, 1984).*
+
+![Torre das Relíquias](docs/screenshots/relics.jpg)
 
 Jogo original inspirado nos jogos "Filmation" dos micros de 8 bits, como o Knight Lore: um castelo de 16 salas em perspetiva isométrica.
 
@@ -453,6 +403,8 @@ Explorador, guardas, fantasmas, relíquias, salas e mapa são originais.
 
 *Inspirado em [Tetris](https://en.wikipedia.org/wiki/Tetris) (Alexey Pajitnov, 1984).*
 
+![Encaixe](docs/screenshots/blocks.jpg)
+
 Jogo original inspirado no clássico das peças que caem (o Tetris): peças de quatro quadrados caem num poço de 10 x 20; roda-as e encaixa-as para completar linhas, que desaparecem. Segue as regras modernas: saco de 7 peças, rotação com "chutes" nas paredes, peça guardada, sombra de onde a peça vai cair, espera antes de assentar, queda rápida e queda imediata. A música é a canção popular russa "Korobeiniki" (domínio público), num arranjo próprio com um timbre por estilo.
 
 | Estilo | O que é |
@@ -477,6 +429,8 @@ Jogo original inspirado no clássico das peças que caem (o Tetris): peças de q
 ## Sarilhos na Escola (1985)
 
 *Inspirado em [Skool Daze](https://en.wikipedia.org/wiki/Skool_Daze) (Microsphere, 1985).*
+
+![Sarilhos na Escola](docs/screenshots/school.jpg)
 
 Jogo original inspirado no Skool Daze: o Zé tem de tirar o boletim do cofre do gabinete do diretor. A escola tem três pisos, salas, escadas, refeitório e recreio; há um horário de aulas a cumprir, colegas (o Brutamontes que bate, o Marrão que faz queixinhas, o Traquinas que anda com a fisga) e quatro professores de beca e barrete que dão linhas de castigo a quem apanham em asneiras.
 
@@ -503,6 +457,8 @@ Jogo original inspirado no Skool Daze: o Zé tem de tirar o boletim do cofre do 
 ## Estrada do Sol (1986)
 
 *Inspirado em [Out Run](https://en.wikipedia.org/wiki/Out_Run) (Sega, 1986).*
+
+![Estrada do Sol](docs/screenshots/outrun.jpg)
 
 | Estilo | O que é |
 |---|---|
@@ -532,6 +488,8 @@ Carro descapotável genérico, trânsito, cenário e as três músicas do rádio
 
 *Inspirado em [The Legend of Zelda](https://pt.wikipedia.org/wiki/The_Legend_of_Zelda_(jogo_eletr%C3%B4nico)) (Nintendo, 1986).*
 
+![Espada do Vale](docs/screenshots/vale.jpg)
+
 Aventura original de vista aérea inspirada nos clássicos de espada e masmorras: um vale de 12 ecrãs e uma masmorra de 6 salas.
 
 | Estilo | O que é |
@@ -560,6 +518,8 @@ Herói, inimigos, mapas e o Guardião de Pedra são originais.
 
 *Inspirado em [Prince of Persia](https://pt.wikipedia.org/wiki/Prince_of_Persia_(jogo_eletr%C3%B4nico_de_1989)) (Jordan Mechner, 1989).*
 
+![Fuga do Palácio](docs/screenshots/palace.jpg)
+
 Jogo original inspirado nos plataformas "cinemáticos" da época, como o Prince of Persia. As personagens são esqueletos animados por poses interpoladas, para uma animação suave, sem folhas de sprites.
 
 | Estilo | O que é |
@@ -586,6 +546,8 @@ Jogo original inspirado nos plataformas "cinemáticos" da época, como o Prince 
 ## Rebanho (1991)
 
 *Inspirado em [Lemmings](https://pt.wikipedia.org/wiki/Lemmings_(jogo_eletr%C3%B4nico)) (DMA Design / Psygnosis, 1991).*
+
+![Rebanho](docs/screenshots/flock.jpg)
 
 Jogo original inspirado nos puzzles como o Lemmings: as ovelhas saem do curral e caminham sozinhas, sem medo de nada; tens de lhes dar funções para que cheguem ao celeiro. O terreno é um mapa de píxeis que se escava e constrói à medida que se joga. Seis níveis, do passeio ao "tudo junto".
 
@@ -753,7 +715,7 @@ A versão Web é exportada sem threads (*Thread Support* desligado), por isso fu
 ### Automático (GitHub Actions)
 `.github/workflows/builds.yml` corre a cada push para `main`:
 - gera as builds de Windows, Linux, Android e Web e deixa-as em **Actions → Artifacts**;
-- publica a versão Web no **GitHub Pages** (é preciso ativar uma vez em **Settings → Pages → Source: GitHub Actions**); fica em `https://<utilizador>.github.io/<repositório>/`;
+- publica a versão Web no **GitHub Pages** (é preciso ativar uma vez em **Settings → Pages → Source: GitHub Actions**); fica em [https://mcampilho.github.io/classic-games/](https://mcampilho.github.io/classic-games/);
 - ao criar uma tag `v*` (`git tag v1.0.0 && git push --tags`), cria também uma **Release** com os ficheiros para descarregar.
 
 ## Licença
